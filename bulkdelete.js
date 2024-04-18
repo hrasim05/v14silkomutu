@@ -9,8 +9,8 @@ module.exports = {
                 .setName('sayı')
                 .setDescription('Temizlenecek Mesaj Sayısını Girin.')
                 .setRequired(true)
-                .setMaxValue(100)
                 .setMinValue(1)
+                .setMaxValue(100)
         ),
     run: async (interaction) => {
         // Check if the user has the required permissions to manage messages
@@ -31,7 +31,7 @@ module.exports = {
             const successEmbed = new EmbedBuilder()
                 .setTitle('Başarılı')
                 .setColor("Green")
-                .setDescription(`:white_check_mark: | ${count} adet mesaj başarıyla silindi.`)
+                .setDescription(`:white_check_mark: | ${count} adet mesaj başarıyla silindi.`) 
             interaction.reply({ embeds: [successEmbed], ephemeral: true });
         } catch (error) {
             const errorEmbed = new EmbedBuilder()
